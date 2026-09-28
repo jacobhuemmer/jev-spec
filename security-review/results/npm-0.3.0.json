@@ -1,0 +1,110 @@
+{
+  "upstreamCommit": "b33961d2cbfee3a93444bd4ed3258a62884d484e",
+  "artifact": "npm-jev-spec-0.3.0",
+  "runtime": "v24.21.0",
+  "generatedAt": "2026-09-28T17:24:41.201Z",
+  "tests": [
+    {
+      "id": "CTRL-01",
+      "name": "Reject traversal and absolute paths outside the root",
+      "status": "PASS"
+    },
+    {
+      "id": "CTRL-02",
+      "name": "Reject an escaping symlink and report destination",
+      "status": "PASS"
+    },
+    {
+      "id": "CTRL-03",
+      "name": "Reject Git option and shell argument injection",
+      "status": "PASS"
+    },
+    {
+      "id": "CTRL-04",
+      "name": "Exclude default environment and private-key patterns",
+      "status": "PASS"
+    },
+    {
+      "id": "CTRL-05",
+      "name": "Block custom API URLs without opt-in",
+      "status": "PASS"
+    },
+    {
+      "id": "CTRL-06",
+      "name": "Fail when the evaluator returns no answer",
+      "status": "PASS"
+    },
+    {
+      "id": "ANSWER-01",
+      "name": "Reject malformed API probability null",
+      "status": "FAIL",
+      "evidence": "Malformed API answer produced a passing check\n\ntrue !== false\n"
+    },
+    {
+      "id": "ANSWER-02",
+      "name": "Reject malformed API probability \"0.99\"",
+      "status": "FAIL",
+      "evidence": "Malformed API answer produced a passing check\n\ntrue !== false\n"
+    },
+    {
+      "id": "ANSWER-03",
+      "name": "Reject malformed API probability 2",
+      "status": "FAIL",
+      "evidence": "Malformed API answer produced a passing check\n\ntrue !== false\n"
+    },
+    {
+      "id": "ANSWER-04",
+      "name": "Reject malformed API probability -1",
+      "status": "FAIL",
+      "evidence": "Malformed API answer produced a passing check\n\ntrue !== false\n"
+    },
+    {
+      "id": "URL-01",
+      "name": "A string false must not enable custom API URLs",
+      "status": "FAIL",
+      "evidence": "Missing expected exception."
+    },
+    {
+      "id": "DIFF-01",
+      "name": "Evaluate changed files with Git-quoted Unicode names",
+      "status": "FAIL",
+      "evidence": "Changed target was skipped=true, check passed=true\n\ntrue !== false\n"
+    },
+    {
+      "id": "CONTEXT-01",
+      "name": "Reject an oversized matched source file rather than evaluate empty code",
+      "status": "FAIL",
+      "evidence": "Oversized source produced a passing check: codeFiles=0, codeChars=0\n\ntrue !== false\n"
+    },
+    {
+      "id": "CONTEXT-02",
+      "name": "Reject truncated context instead of silently allowing a passing check",
+      "status": "FAIL",
+      "evidence": "Truncated source produced a passing check with no warning\n\ntrue !== false\n"
+    }
+  ],
+  "observations": [
+    {
+      "id": "TRUST-01",
+      "name": "Selected source text reaches the API without secret redaction",
+      "observed": true,
+      "syntheticDataOnly": true
+    },
+    {
+      "id": "TRUST-02",
+      "name": "Dry run executes config with access to its process environment",
+      "exitCode": 0,
+      "observed": true
+    },
+    {
+      "id": "TRUST-03",
+      "name": "Prompt boundary text is preserved, not escaped",
+      "observed": true,
+      "note": "Structural observation only; no live model injection was attempted."
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 8
+  }
+}

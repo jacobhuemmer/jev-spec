@@ -1,0 +1,11 @@
+{
+  "name": "jev-spec",
+  "version": "0.3.0",
+  "gitHead": "8cd750650e6e9532c1877e286d867cefa1eace2c",
+  "tarball": "https://registry.npmjs.org/jev-spec/-/jev-spec-0.3.0.tgz",
+  "integrity": "sha512-9e01xrqcojkdr3jw3qn52obL+HGvjY3wQD82fB7zsCAGpqZfLJYF+mzM4X2m1ED/LobTl2ni0M0KWTJ7gp50cA==",
+  "integrityVerified": true,
+  "sha256": "e6bbfbee3c182db7e368b66cfa8ad6f10fde88872601a31c01f7c7c7d02fc143",
+  "attestationsAdvertised": true,
+  "attestationVerified": false
+}
